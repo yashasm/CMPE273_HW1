@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Use of functions</title>
+</head>
+<body>
+<h1>Guess the number</h1>
+
+
+<p>Select a number between 1 to 10:</p> <input type="text" id="number" />
+<p><input type="button" id="btn" value ="test" onclick="testNum()"/></p>
+
+<p><input type="button" id="reset" value ="reset" onclick="reset()"/></p>
+</body>
+<script>
+function getRandomArbitrary(min, max) {
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+var storedNumber = getRandomArbitrary(1, 10);
+function reset(){
+	storedNumber = getRandomArbitrary(1, 10);
+}
+
+function testNum(){
+	var selectedNumber = document.getElementById("number").value;
+	if(selectedNumber > storedNumber){
+		alert("Your number is little higher than the actual number! guess again");
+	}
+	else if(selectedNumber < storedNumber){
+		alert("Your number is little lower than the actual number! guess again");
+	}
+	else{
+		alert("Bingo");
+	}
+}
+</script>
+</html>

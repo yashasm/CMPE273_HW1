@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Use of functions</title>
+</head>
+<body>
+<h1>Get details of the pokemons</h1>
+<p>Pokemon name:
+<select name="pokemonlist" form="pokemonform" id ="poke">
+  <option value="pikachu">pikachu</option>
+  <option value="charizard">charizard</option>
+  <option value="psyduck">psyduck</option>  
+</select>
+</p>
+<p><input type="button" id="btn" value ="Get type" onclick="getType()"/></p>
+</body>
+<script>
+
+function getType(){
+	var pokes = document.getElementById("poke").value;
+	alert("selected pokemon is "+pokes);
+}
+
+</script>
+
+</html>

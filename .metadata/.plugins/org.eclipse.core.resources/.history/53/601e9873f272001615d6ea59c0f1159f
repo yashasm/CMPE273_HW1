@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Use of functions</title>
+</head>
+<body>
+<h1>Guess the number</h1>
+
+
+<p>Select a number between 1 to 10:</p> <input type="text" id="number" />
+<p><input type="button" id="btn" value ="Special Move" onclick="getMove()"/></p>
+</body>
+<script>
+function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+</script>
+</html>

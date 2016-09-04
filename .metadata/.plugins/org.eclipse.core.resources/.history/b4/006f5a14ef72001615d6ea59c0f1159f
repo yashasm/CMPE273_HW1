@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Use of functions</title>
+</head>
+<body>
+<h1>Pokedex</h1>
+<p>Pokemon name:
+<select name="pokemonlist" form="pokemonform" id ="poke">
+  <option value="pikachu">pikachu</option>
+  <option value="charmander">charizard</option>
+  <option value="psyduck">psyduck</option>  
+</select>
+</p>
+<p><input type="button" id="btn" value ="Get type" onclick="getType()"/></p>
+</body>
+<script>
+
+var pikachu = {type:"Electric",species: "Mouse Pokemon",nextEvolution: "Raichu",specialMove:"Thunder Shock"};
+var charmander = {type:"Fire",species: "Lizard Pokemon",nextEvolution: "Charmeleon",specialMove:"Dragon Rage"};
+var bulbasaur = {type:"Grass or Poison",species: "Seed Pokemon",nextEvolution: "Ivysaur",specialMove:"Vine whip"};
+
+function getType(){
+	var pokes = document.getElementById("poke").value;
+	if(pokes == "pikachu"){
+		alert(pikachu.type);
+	}
+}
+
+</script>
+
+</html>

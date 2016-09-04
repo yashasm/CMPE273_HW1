@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Use of functions</title>
+</head>
+<body>
+<select name="pokemonlist" form="pokemonform">
+  <option value="pikachu">pikachu</option>
+  <option value="charizard">charizard</option>
+  <option value="psyduck">psyduck</option>  
+</select>
+</body>
+<script>
+
+</script>
+
+</html>
