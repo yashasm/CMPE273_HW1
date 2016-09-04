@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Variable types</title>
+</head>
+<body>
+<script>
+function identifyType(data){
+	document.write("Type of the variable is : "+ typeof data+ "<br>"  );
+}
+
+var type1 = 1;
+var type2 = "yashas";
+var type3 = true;
+var type4 = {"name":"yashas"};
+
+
+identifyType(type1);
+identifyType(type2);
+identifyType(type3);
+identifyType(type4);
+
+</script>
+</body>
+</html>

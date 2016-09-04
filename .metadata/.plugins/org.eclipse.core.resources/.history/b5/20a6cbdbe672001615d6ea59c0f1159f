@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Example for object type</title>
+</head>
+<body>
+<script>
+
+var gameCharacter = {
+		name : "Naruto",
+		sex : "Male",
+		age: 17,
+		strengths : ["Ninjutsu","Taijutsu"],		
+		weakness : ["Genjutsu"],
+		weapon : "Kunai",
+		useWeapon : function(){
+			document.write(this.name + " used " + this.weapon +"<br>");
+		},
+		showStrengths : function(){
+			document.write("strengths are " + this.strengths.toString() +"<br>");
+		}
+		
+};
+var test = "yashas";
+document.write("character name "+test+"<br>");
+document.write("character name "+gameCharacter.name+"<br>");
+gameCharacter.useWeapon();
+gameCharacter.showStrenghts();
+
+</script>
+</body>
+</html>

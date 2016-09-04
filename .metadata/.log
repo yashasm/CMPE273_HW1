@@ -43,3 +43,12 @@ Caused by: java.net.SocketTimeoutException: connect timed out
 	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:244)
 	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:125)
 	... 13 more
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2016-09-04 14:10:40.102
+!MESSAGE cacheFile=file:/C:/Users/yash/Downloads/eclipse-jee-mars-1-win32-x86_64/eclipse/configuration/org.eclipse.wst.server.discovery/serverAdapterSitesDetails.xml
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2016-09-04 14:10:40.136
+!MESSAGE cacheFile=file:/C:/Users/yash/Downloads/eclipse-jee-mars-1-win32-x86_64/eclipse/configuration/org.eclipse.wst.server.discovery/serverAdapterSitesDetails.xml
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2016-09-04 14:11:06.194
+!MESSAGE cacheFile=file:/C:/Users/yash/Downloads/eclipse-jee-mars-1-win32-x86_64/eclipse/configuration/org.eclipse.wst.server.discovery/serverAdapterSitesDetails.xml

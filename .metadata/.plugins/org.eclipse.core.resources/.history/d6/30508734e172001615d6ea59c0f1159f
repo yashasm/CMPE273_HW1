@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Variable types</title>
+</head>
+<body>
+<script>
+function identifyType(data){
+	document.write("Type of the variable is : "+ typeof data+ "<br>"  );
+}
+
+var numberType = 1;
+var stringType = "yashas";
+var booleanType = true;
+var arrayType = ["name","age","sex"];
+var objectType = {"name":"yashas"};
+
+identifyType(arrayType);
+identifyType(numberType);
+identifyType(stringType);
+identifyType(booleanType);
+identifyType(objectType);
+
+</script>
+</body>
+</html>
