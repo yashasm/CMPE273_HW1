@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>In App Purchases</title>
+</head>
+<body>
+<h1>In App Purchases for pokemon</h1>
+		<form id="cardForm">
+			Card Number: <input type="number" name="cardnumber">  <br><br>
+			Available Amount: <input type="number" name="type">  <br> <br>
+			Above inputs are number fields. Please provide card number and available amount.<br><br>		
+			<input type="button"
+			id="save" value="Save" onclick="validate()"/> 				
+		</form>
+
+<h3>Available Items</h3>		
+<ul style="list-style-type:circle">
+  <li>Coins----------------1 $</li>
+  <li>Lure Modules------2 $</li>
+  <li>Poke Balls----------1 $  </li>
+  <li>Incense--------------5 $</li>
+  <li>Lucky Eggs--------25$</li>
+  <li>Egg Incubator-----10$</li>
+</ul>
+
+<form id = "appForm">
+ <select name="itemlist" form="pokemonform" id ="item">
+  <option value="coins">Coins</option>
+  <option value="lure">Lure Modules</option>
+  <option value="balls">Poke Balls</option>
+  <option value="incense">Incense</option>
+  <option value="lucky">Lucky Eggs</option>
+  <option value="egg">Egg Incubator</option>  
+ </select>
+ Count: <input type="number" id="count" value ="Count"/><br><br>
+ <input type="button" id="btn" value ="Buy" onclick="buyItem()"/> 
+</form>
+</body>
+
+<script>
+'use strict';
+var cardFormDetailsMain = document.getElementById("cardForm");
+
+document.getElementById("appForm").disabled = true;
+var availableAmount = cardFormDetails[1].value;
+
+function buyItem(){
+	var appFormDetails = document.getElementById("appForm");
+	var itemSelected = appFormDetails[0].value;
+	var itemCount = appFormDetails[1].value;
+	if(itemCount <= 0){
+		alert('Invalid Item count');
+	}
+	
+	var originalAmount = availableAmount;
+	//var error = false;
+	switch(itemSelected){
+	case "coins":
+		availableAmount = availableAmount - (itemCount * 1);
+		
+		break;
+	case "lure":
+		availableAmount = availableAmount - (itemCount * 2);		
+		break;
+	case "balls":
+		availableAmount = availableAmount - (itemCount * 1);		
+		break;
+	case "incense":
+		availableAmount = availableAmount - (itemCount * 5);		
+		break;
+	case "lucky":
+		availableAmount = availableAmount - (itemCount * 25);		
+		break;
+	case "egg":
+		availableAmount = availableAmount - (itemCount * 10);		
+		break;	
+	}
+	
+	if(availableAmount < 0){
+		availableAmount = originalAmount;
+		alert('You do not have sufficient funds');
+		//return;
+	}
+	alert('Available amount : '+availableAmount);
+	var cardFormDetailsUpdate = document.getElementById("cardForm");
+	cardFormDetailsUpdate[1].value = availableAmount;
+	//alert('item is:'+itemSelected+' Item count:'+itemCount );
+}
+
+function validate(){
+	var cardFormDetails = document.getElementById("cardForm");
+	var cardNumber = cardFormDetails[0].value;
+	var password = cardFormDetails[1].value;
+	
+	if(cardNumber.length != 16){
+		alert("Card number should be 16 in length");
+	}
+	else if(password.length == 0){
+		alert("password can not be blank");
+	}
+	else{
+		//cardFormDetails[1].value = 1;
+		document.getElementById("cardForm").disabled = true;
+		document.getElementById("appForm").disabled = false;
+	}
+}
+
+
+
+</script>
+</html>
