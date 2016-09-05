@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Change Password</title>
+</head>
+<body>
+<h1>Change of password</h1>
+<form id="userForm">
+Username: <input type="text" name="pokename">  <br><br>
+Password: <input type="password" name="type">  <br> <br>
+Confirm Password: <input type="password" name="species">  <br><br>
+ <input type="button"
+id="submit" value="Submit" onclick="validate()" />
+</form>
+
+</body>
+<script>
+
+function validate(){
+	var pokeFormDetails = document.getElementById("userForm");
+	
+}
+</script>
+</html>

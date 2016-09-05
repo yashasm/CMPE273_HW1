@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Change Password</title>
+</head>
+<body>
+<h1>Change of password</h1>
+<form id="userForm">
+Username: <input type="text" name="pokename">  <br><br>
+Password: <input type="password" name="type">  <br> <br>
+Confirm Password: <input type="password" name="species">  <br><br>
+ <input type="button"
+id="submit" value="Submit" onclick="validate()" />
+</form>
+
+</body>
+<script>
+
+function validate(){
+	var userFormDetails = document.getElementById("userForm");
+	
+	var username = userFormDetails[0].value;
+	var password = userFormDetails[1].value;
+	var confirmPassword = userFormDetails[2].value;
+
+	if(username == "") {
+	      alert("Error: Username cannot be blank!");	      
+	      return false;
+	    }
+	    re = /^\w+$/;
+	    if(!re.test(username)) {
+	      alert("Error: Username must contain only letters, numbers and underscores!");
+	      //form.username.focus();
+	      return false;
+	    }
+
+	    if(password != "" && password == confirmPassword) {
+	      if(password .length < 6) {
+	        alert("Error: Password must contain at least six characters!");
+	        //form.pwd1.focus();
+	        return false;
+	      }
+	      if(password  == username) {
+	        alert("Error: Password must be different from Username!");
+	        //form.pwd1.focus();
+	        return false;
+	      }
+	      re = /[0-9]/;
+	      if(!re.test(password)) {
+	        alert("Error: password must contain at least one number (0-9)!");
+	        //form.pwd1.focus();
+	        return false;
+	      }
+	      re = /[a-z]/;
+	      if(!re.test(password )) {
+	        alert("Error: password must contain at least one lowercase letter (a-z)!");
+	        //form.pwd1.focus();
+	        return false;
+	      }
+	      re = /[A-Z]/;
+	      if(!re.test(password)) {
+	        alert("Error: password must contain at least one uppercase letter (A-Z)!");
+	        form.pwd1.focus();
+	        return false;
+	      }
+	    } else {
+	      alert("Error: Please check that you've entered and confirmed your password!");
+	      form.pwd1.focus();
+	      return false;
+	    }
+
+	    alert("You entered a valid password: " + form.pwd1.value);
+}
+</script>
+</html>
