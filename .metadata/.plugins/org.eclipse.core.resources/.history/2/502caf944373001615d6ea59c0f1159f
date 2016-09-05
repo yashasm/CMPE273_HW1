@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Pokedex DB</title>
+</head>
+<body>
+<h1>Pokemon information storing system for Pokedex</h1>
+<form id="pokeForm">
+Pokemon Name: <input type="text" name="pokename"> </br> <br>
+Pokemon Type: <input type="text" name="type"> </br> <br> 
+Pokemon Species: <input type="text" name="species"> </br> <br>
+Pokemon Next Evolution: <input type="text" name="evolution"> </br> <br>
+Pokemon Special Move: <input type="text" name="move"> </br> <br>
+ <input type="button"
+id="submit" value="Create pokedex" onclick="createPokedex()" />
+</form>
+<br>
+<br>
+<div id="div1"></div>
+</body>
+</html>

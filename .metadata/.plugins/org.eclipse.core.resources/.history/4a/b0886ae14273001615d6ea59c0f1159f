@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Pokedex DB</title>
+</head>
+<body>
+<h1>Pokemon information storing system for Pokedex</h1>
+<form id="pokeForm">
+First name: <input type="text" name="pokename"> </br> <br>
+Last name: <input type="text" name="lastname"> </br> <br> SJSU
+ID: <input type="text" name="sjsuid"> </br> <br> Age: <input
+type="text" name="age"> </br> <br> <input type="button"
+id="submit" value="Create new student" onclick="createNewStudent()" />
+</form>
+<br>
+<br>
+</body>
+</html>

@@ -125,3 +125,37 @@ org.eclipse.wst.xml.core.internal.document.StructuredDocumentRegionManagementExc
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.jface.text 4 0 2016-09-05 01:44:51.872
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at java.lang.String.<init>(Unknown Source)
+	at org.eclipse.wst.jsdt.internal.core.SelectionRequestor.resolveCompilationUnit(SelectionRequestor.java:866)
+	at org.eclipse.wst.jsdt.internal.core.SelectionRequestor.resolveType(SelectionRequestor.java:780)
+	at org.eclipse.wst.jsdt.internal.core.SelectionRequestor.acceptType(SelectionRequestor.java:177)
+	at org.eclipse.wst.jsdt.internal.codeassist.SelectionEngine.acceptQualifiedTypes(SelectionEngine.java:333)
+	at org.eclipse.wst.jsdt.internal.codeassist.SelectionEngine.select(SelectionEngine.java:789)
+	at org.eclipse.wst.jsdt.internal.core.Openable.codeSelect(Openable.java:167)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.codeSelect(CompilationUnit.java:330)
+	at org.eclipse.wst.jsdt.web.core.javascript.JsTranslation.getElementsFromJsRange(JsTranslation.java:310)
+	at org.eclipse.wst.jsdt.web.ui.internal.taginfo.JSDTHoverProcessor.getHoverInfo(JSDTHoverProcessor.java:120)
+	at org.eclipse.wst.sse.ui.internal.taginfo.BestMatchHover.getHoverInfo2(BestMatchHover.java:142)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.jface.text 4 0 2016-09-05 01:44:53.145
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at java.lang.String.<init>(Unknown Source)
+	at org.eclipse.wst.jsdt.internal.core.SelectionRequestor.resolveCompilationUnit(SelectionRequestor.java:866)
+	at org.eclipse.wst.jsdt.internal.core.SelectionRequestor.resolveType(SelectionRequestor.java:780)
+	at org.eclipse.wst.jsdt.internal.core.SelectionRequestor.acceptType(SelectionRequestor.java:177)
+	at org.eclipse.wst.jsdt.internal.codeassist.SelectionEngine.acceptQualifiedTypes(SelectionEngine.java:333)
+	at org.eclipse.wst.jsdt.internal.codeassist.SelectionEngine.select(SelectionEngine.java:789)
+	at org.eclipse.wst.jsdt.internal.core.Openable.codeSelect(Openable.java:167)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.codeSelect(CompilationUnit.java:330)
+	at org.eclipse.wst.jsdt.web.core.javascript.JsTranslation.getElementsFromJsRange(JsTranslation.java:310)
+	at org.eclipse.wst.jsdt.web.ui.internal.taginfo.JSDTHoverProcessor.getHoverInfo(JSDTHoverProcessor.java:120)
+	at org.eclipse.wst.sse.ui.internal.taginfo.BestMatchHover.getHoverInfo2(BestMatchHover.java:142)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
