@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1> Select your soccer dream team !!</h1>
+<div id = "container" style = "width:100%">
+    <div id ="left" style = "float:left; width: 40%;">
+        <input type="checkbox" name="option1" value="Lionel Messi"> Lionel Messi<br>
+        <input type="checkbox" name="option2" value="Cristiano Ronalldo" id ="player2" for="player22"> Cristiano Ronalldo<br>
+    </div>
+    <div id = "middle" style = "float:left; width: 20%;">
+		<input type="button" value="Add" id="add" onClick="addToTeam()" />
+		<input type="button" value="Remove" id="remove" onClick="removeFromTeam()" />
+    </div>
+    <div id = "right" style = "float:left; width: 40%;">
+		<p>right</p>
+    </div>
+</div>
+</body>
+<script>
+var divLeft = document.getElementById("left");
+function removeFromTeam(){
+	var play = document.getElementById("player2");
+	var playName = document.getElementById("player22");
+	divLeft.removeChild(play);
+	divLeft.removeChild(playName);
+}
+</script>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1> Select your soccer dream team !!</h1>
+<div id = "container" style = "width:100%">
+    <div id ="left" style = "float:left; width: 40%;">        
+    </div>
+    <div id = "middle" style = "float:left; width: 20%;">
+		<input type="button" value="Add" id="add" onClick="addToTeam()" />
+		<input type="button" value="Remove" id="remove" onClick="removeFromTeam()" />
+    </div>
+    <div id = "right" style = "float:left; width: 40%;">
+		<p>right</p>
+    </div>
+</div>
+</body>
+<script>
+var divLeft = document.getElementById("left");
+var divMiddle = document.getElementById("middle");
+var divRight = document.getElementById("right");
+
+var players = ["yashas","keerthi"];
+var myTeam = [];
+
+for (i = 0; i < players.length; i++) {
+	var check = document.createElement("INPUT");
+	check.setAttribute("type", "checkbox");
+	check.setAttribute("id", players[i]);
+	divLeft.appendChild(check);
+	var lab = document.createElement("LABEL");
+	var text = document.createTextNode(players[i]);
+	lab.setAttribute("for", players[i]);
+	lab.setAttribute("id", players[i] + "txt");
+	lab.appendChild(text);
+	divLeft.appendChild(lab);
+	var newLine = document.createElement("br");
+	divLeft.appendChild(newLine);
+	}
+
+
+
+function addToTeam(){
+	for (i = 0; i < players.length; i++) {
+		var playersTeam = document.getElementById(players[i]);
+		//var txt = document.getElementById(players[i] + "txt").value;
+			if (playersTeam.checked == true) {
+				var check = document.createElement("INPUT");
+				check.setAttribute("type", "checkbox");
+				check.setAttribute("id", players[i]);
+				divRight.appendChild(check);
+				var lab = document.createElement("LABEL");
+				var text = document.createTextNode(players[i]);
+				lab.setAttribute("for", players[i]);
+				lab.setAttribute("id", players[i] + "txt");
+				lab.appendChild(text);
+				divRight.appendChild(lab);
+				var newLine = document.createElement("br");
+				divRight.appendChild(newLine);
+			
+			}
+		}	
+}
+
+function removeFromTeam(){
+	var play = document.getElementById("player2");
+	var playName = document.getElementById("player222");
+	divLeft.removeChild(play);
+	divLeft.removeChild(playName);
+}
+</script>
+</html>
