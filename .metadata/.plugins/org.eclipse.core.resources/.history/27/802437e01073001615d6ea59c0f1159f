@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My Top Movies</title>
+</head>
+<body>
+<h1>Hover over the movie titles to get more details. Single click to get reviews and double click to close it.</h1>
+<br>
+<br>
+<label for="theManFromTheEarth" onmouseover="displayDetails(this)"
+ondblclick="hideDetils(this)" onclick="showReviews(this)" id="theman"><b>The Man From The Earth</b></label>
+<p id='themandetails'></p>
+<p id='themanreview'></p>
+<label for="inception" onmouseover="displayDetails(this)"
+ondblclick="hideDetils(this)" onclick="showReviews(this)" id="inception"><b>Inception</b></label>
+<p id='inceptiondetails'></p>
+<p id='inceptionreview'></p>
+<label for="theDarkKnight" onmouseover="displayDetails(this)"
+ondblclick="hideDetils(this)" onclick="showReviews(this)" id="thedarkknight"><b>The Dark Knight</b></label>
+<p id='thedarkknightdetails'></p>
+<p id='thedarkknightreview'></p>
+<label for="shutterIsland" onmouseover="displayDetails(this)"
+ondblclick="hideDetils(this)" onclick="showReviews(this)" id="shutterisland"><b>Shutter Island</b></label>
+<p id='shutterislanddetails'></p>
+<p id='shutterislandreview'></p>
+<label for="iAmSam" onmouseover="displayDetails(this)"
+ondblclick="hideDetils(this)" onclick="showReviews(this)" id="iamsam"><b>I Am Sam</b></label>
+<p id='iamsamdetails'></p>
+<p id='iamsamreview'></p>
+<br>
+<br>
+</body>
+</html>

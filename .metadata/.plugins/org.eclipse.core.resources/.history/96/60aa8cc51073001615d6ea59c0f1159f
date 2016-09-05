@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My Top Movies</title>
+</head>
+<body>
+<h1>Hover over the movie titles to get more details. Single click to get reviews and double click to close it.</h1>
+<br>
+<br>
+<br>
+<label for="theManFromTheEarth" onmouseover="displayDetails(this)"
+ondblclick="hideDetils(this)" onclick="showReviews(this)" id="theman"><b>The Man From The Earth</b></label>
+<p id='themandetails'></p>
+<p id='themanreview'></p>
+<label for="inception" onmouseover="displayDetails(this)"
+ondblclick="hideDetils(this)" onclick="showReviews(this)" id="inception"><b>Inception</b></label>
+<p id='themandetails'></p>
+<p id='themanreview'></p>
+<label for="theManFromTheEarth" onmouseover="displayDetails(this)"
+ondblclick="hideDetils(this)" onclick="showReviews(this)" id="theman"><b>To Do List</b></label>
+<p id='themandetails'></p>
+<p id='themanreview'></p>
+<label for="theManFromTheEarth" onmouseover="displayDetails(this)"
+ondblclick="hideDetils(this)" onclick="showReviews(this)" id="theman"><b>To Do List</b></label>
+<p id='themandetails'></p>
+<p id='themanreview'></p>
+<label for="theManFromTheEarth" onmouseover="displayDetails(this)"
+ondblclick="hideDetils(this)" onclick="showReviews(this)" id="theman"><b>To Do List</b></label>
+<p id='themandetails'></p>
+<p id='themanreview'></p>
+<br>
+<br>
+</body>
+</html>

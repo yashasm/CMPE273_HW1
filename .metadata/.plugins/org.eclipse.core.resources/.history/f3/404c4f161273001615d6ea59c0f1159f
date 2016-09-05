@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My Top Movies</title>
+</head>
+<body>
+<h1>Hover over the movie titles to get more details. Single click to get reviews and double click to close it.</h1>
+<br>
+<br>
+<label for="theManFromTheEarth" onmouseover="displayDetails(this)"
+ondblclick="hideDetils(this)" onclick="showReviews(this)" id="theman"><b>The Man From The Earth</b></label>
+<p id='themandetails'></p>
+<p id='themanreview'></p>
+<label for="inception" onmouseover="displayDetails(this)"
+ondblclick="hideDetils(this)" onclick="showReviews(this)" id="inception"><b>Inception</b></label>
+<p id='inceptiondetails'></p>
+<p id='inceptionreview'></p>
+<label for="theDarkKnight" onmouseover="displayDetails(this)"
+ondblclick="hideDetils(this)" onclick="showReviews(this)" id="thedarkknight"><b>The Dark Knight</b></label>
+<p id='thedarkknightdetails'></p>
+<p id='thedarkknightreview'></p>
+<label for="shutterIsland" onmouseover="displayDetails(this)"
+ondblclick="hideDetils(this)" onclick="showReviews(this)" id="shutterisland"><b>Shutter Island</b></label>
+<p id='shutterislanddetails'></p>
+<p id='shutterislandreview'></p>
+<label for="iAmSam" onmouseover="displayDetails(this)"
+ondblclick="hideDetils(this)" onclick="showReviews(this)" id="iamsam"><b>I Am Sam</b></label>
+<p id='iamsamdetails'></p>
+<p id='iamsamreview'></p>
+<br>
+<br>
+</body>
+<script>
+var them = "Director: Richard Schenkman" + '<br>' + "Stars: David Lee Smith, Tony Todd, John Billingsley" + '<br>' + "Release Year : 2007";
+var thema = "An impromptu goodbye party for Professor John Oldman becomes a mysterious interrogation after the retiring scholar reveals to his colleagues he has a longer and stranger past than they can imagine.";
+
+function displayDetails(val){
+	var data = val.getAttribute("id") + "details";
+	var div1 = document.getElementById(data);
+	div1.innerHTML = eval(data.substring(0, 4));
+}
+
+function showReviews(this){
+	var data = val.getAttribute("id") + "review";
+	var div2 = document.getElementById(data);
+	div2.innerHTML = eval(data.substring(0, 5));
+}
+
+function hideDetils(this){
+	var data = val.getAttribute("id") + "details";
+	var div1 = document.getElementById(data);
+	var data2 = val.getAttribute("id") + "review";
+	var div2 = document.getElementById(data);
+	div1.innerHTML = "";
+	div2.innerHTML = "";
+	
+	
+}
+</script>
+</html>

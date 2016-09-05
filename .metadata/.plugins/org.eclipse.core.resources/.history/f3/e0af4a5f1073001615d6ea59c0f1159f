@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My Top Movies</title>
+</head>
+<body>
+<h1>Hover over the movie titles to get more details. Single click to get reviews and double click to close it.</h1>
+<br>
+<br>
+<br>
+<label for="theManFromTheEarth" onmouseover="displayDetails(this)"
+ondblclick="hideDetils(this)" onclick="showReviews(this)" id="todo"><b>To Do List</b></label>
+<p id='todolist'></p>
+<label for="pendingWork" onmouseover="displayList(this)"
+ondblclick="dontHide(this)" id="pending"><b>Pending Work</b></label>
+<p id='pendinglist'></p>
+<label for="doneWork" onmouseover="displayList(this)"
+ondblclick="dontHide(this)" id="done"><b>Done</b></label>
+<p id='donelist'></p>
+<br>
+<br>
+</body>
+</html>
