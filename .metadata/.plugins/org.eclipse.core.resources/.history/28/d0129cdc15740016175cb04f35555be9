@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Simple Calculator</title>
+</head>
+<body>
+<h1>Simple calculator</h1>
+<h3>Supported operations are + , -,*, %</h3>
+Value 1:<input type = "text" id ="value1">
+
+</body>
+<script>
+
+</script>
+
+</html>

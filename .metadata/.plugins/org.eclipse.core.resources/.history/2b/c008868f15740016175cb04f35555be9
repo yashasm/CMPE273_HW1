@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Type Conversion</title>
+</head>
+<body>
+<script>
+var test = "yashas";
+var dateset = "keerthi";
+var sum = test / dateset;
+document.write(sum);
+</script>
+</body>
+</html>

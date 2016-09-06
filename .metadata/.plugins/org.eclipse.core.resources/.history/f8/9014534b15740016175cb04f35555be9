@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Type Conversion</title>
+</head>
+<body>
+<script>
+var test = String(Date());
+var dateset = Date();
+document.write(typeof dateset);
+</script>
+</body>
+</html>
