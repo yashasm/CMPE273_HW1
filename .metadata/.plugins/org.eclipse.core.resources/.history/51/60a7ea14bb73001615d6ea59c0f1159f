@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Get 4 gallon of water</title>
+</head>
+<body>
+<form id="userForm">
+		Main Jug: <input type="text" name="main">  <br><br>
+		3 Gallon Jug: <input type="text" name="three">  <br><br>
+		5 Gallon Jug: <input type="text" name="five">  <br><br>		
+		</form>
+</body>
+<script>
+var userForm = document.getElementById("cardForm");
+</script>
+</html>

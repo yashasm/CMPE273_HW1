@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Get 4 gallon of water</title>
+</head>
+<body>
+<form id="userForm">
+		Main Jug: <input type="number" name="main">  <br><br>
+		3 Gallon Jug: <input type="number" name="three">  <br><br>
+		5 Gallon Jug: <input type="number" name="five">  <br><br>		
+		</form>
+ <input type="button" id="mainto3" value ="Main to 3 Gallon Jug" onclick="mainToThree()"/>
+  <input type="button" id="mainto5" value ="Main to 5 Gallon Jug" onclick="mainToFive()"/>
+   <input type="button" id="threeto5" value ="3 Gallon Jug to 5 Gallon Jug" onclick="threeToFive()"/>
+   <input type="button" id="threetomain" value ="3 Gallon Jug to Main Jug" onclick="threeToMain()"/>
+   <input type="button" id="Fiveto3" value ="5 Gallon Jug to 3 Gallon Jug" onclick="fiveToThree()"/>
+   <input type="button" id="Fivetomain" value ="5 Gallon Jug to Main Jug" onclick="fiveToMain()"/>
+</body>
+<script>
+var userForm = document.getElementById("userForm");
+document.getElementById("userForm").disabled = true;
+userForm[0].value = 100;
+userForm[1].value = 0;
+userForm[2].value = 0;
+
+var oldMain = 0;
+var oldThree = 0;
+var oldFive = 0;
+
+function preserveState(){
+	oldMain =userForm[0].value;
+	oldThree =userForm[1].value;
+	oldFive =userForm[2].value;
+}
+
+function revertOldState(){
+	 userForm[0].value = oldMain;
+	 userForm[1].value = oldThree;
+	 userForm[2].value = oldFive;
+}
+
+
+/*
+function mainToThree(){
+	try{
+		preserveState();
+		userForm[0].value = Number(userForm[0].value) - 3;
+		userForm[1].value = Number(userForm[1].value) + 3;
+		if(userForm[1].value > 3){
+			throw "3 gallon jug is already full";
+		}
+	}
+	catch(err){
+		revertOldState();
+		alert(err);		
+	}
+}
+*/
+function mainToThree(){
+	try{
+		preserveState();		
+		var remaining = 3 - Number(userForm[1].value);
+		if(remaining == 0){
+			throw "3 gallon jug is full";
+		}
+		if(remaining >= Number(userForm[0].value)){
+			userForm[1].value = Number(userForm[1].value) + Number(userForm[0].value);
+			userForm[0].value = 0;
+		}
+		else{
+			var diff = Number(userForm[0].value) - remaining;
+			userForm[0].value =  diff;
+			userForm[1].value = Number(userForm[1].value)  + remaining;
+		}			
+		
+	}
+	catch(err){
+		revertOldState();
+		alert(err);
+	}	
+}
+/*
+function mainToFive(){
+	try{
+		preserveState();
+		userForm[0].value = Number(userForm[0].value) - 5;
+		userForm[2].value = Number(userForm[2].value) + 5;
+		if(userForm[2].value > 5){
+			throw "5 gallon jug is already full";
+		}
+	}
+	catch(err){
+		revertOldState();
+		alert(err);		
+	}
+}
+*/
+
+function mainToFive(){
+	try{
+		preserveState();		
+		var remaining = 5 - Number(userForm[2].value);
+		if(remaining == 0){
+			throw "5 gallon jug is full";
+		}
+		if(remaining >= Number(userForm[0].value)){
+			userForm[2].value = Number(userForm[2].value) + Number(userForm[0].value);
+			userForm[0].value = 0;
+		}
+		else{
+			var diff = Number(userForm[0].value) - remaining;
+			userForm[0].value =  diff;
+			userForm[2].value = Number(userForm[2].value)  + remaining;
+		}			
+		
+	}
+	catch(err){
+		revertOldState();
+		alert(err);
+	}	
+}
+
+/* function threeToMain(){
+	try{
+		preserveState();
+		userForm[0].value = Number(userForm[0].value) + 3;
+		userForm[1].value = Number(userForm[1].value) - 3;
+		if(userForm[1].value < 0){
+			throw "3 gallon jug is empty";
+		}
+	}
+	catch(err){
+		revertOldState();
+		alert(err);		
+	}
+} */
+function threeToMain(){
+	try{
+		preserveState();		
+		var remaining = 100 - Number(userForm[2].value);
+		if(remaining == 0){
+			throw "5 gallon jug is full";
+		}
+		if(remaining >= Number(userForm[0].value)){
+			userForm[2].value = Number(userForm[2].value) + Number(userForm[0].value);
+			userForm[0].value = 0;
+		}
+		else{
+			var diff = Number(userForm[0].value) - remaining;
+			userForm[0].value =  diff;
+			userForm[2].value = Number(userForm[2].value)  + remaining;
+		}			
+		
+	}
+	catch(err){
+		revertOldState();
+		alert(err);
+	}	
+}
+
+function fiveToMain(){
+	try{
+		preserveState();
+		userForm[0].value = Number(userForm[0].value) + 5;
+		userForm[2].value = Number(userForm[2].value) - 5;
+		if(userForm[2].value < 0){
+			throw "5 gallon jug is empty";
+		}
+	}
+	catch(err){
+		revertOldState();
+		alert(err);		
+	}
+}
+
+function threeToFive(){
+	try{
+		preserveState();		
+		var remaining = 5 - Number(userForm[2].value);
+		if(remaining == 0){
+			throw "5 gallon jug is full";
+		}
+		if(remaining >= Number(userForm[1].value)){
+			userForm[2].value = Number(userForm[2].value) + Number(userForm[1].value);
+			userForm[1].value = 0;
+		}
+		else{
+			var diff = Number(userForm[1].value) - remaining;
+			userForm[1].value =  diff;
+			userForm[2].value = Number(userForm[2].value)  + remaining;
+		}			
+		
+	}
+	catch(err){
+		revertOldState();
+		alert(err);
+	}
+}
+
+function fiveToThree(){
+	try{
+		preserveState();		
+		var remaining = 3 - Number(userForm[1].value);
+		if(remaining == 0){
+			throw "3 gallon jug is full";
+		}
+		if(remaining >= Number(userForm[2].value)){
+			userForm[1].value = Number(userForm[1].value) + Number(userForm[2].value);
+			userForm[2].value = 0;
+		}
+		else{
+			var diff = Number(userForm[2].value) - remaining;
+			userForm[2].value =  diff;
+			userForm[1].value = Number(userForm[1].value)  + remaining;
+		}			
+		
+	}
+	catch(err){
+		revertOldState();
+		alert(err);
+	}	
+}
+</script>
+</html>

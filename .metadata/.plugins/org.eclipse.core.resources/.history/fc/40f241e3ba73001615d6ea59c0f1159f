@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Get 4 gallon of water</title>
+</head>
+<body>
+<form id="userForm">
+		Main Jug: <input type="text" name="pokename">  <br><br>
+		Password: <input type="password" name="type">  <br> <br>
+		Confirm Password: <input type="password" name="species">  <br><br>
+		<input type="button"
+		id="submit" value="Submit" onclick="validate()" />
+		</form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Get 4 gallon of water</title>
+</head>
+<body>
+<form id="userForm">
+		Main Jug: <input type="text" name="main">  <br><br>
+		3 Gallon Jug: <input type="text" name="three">  <br><br>
+		5 Gallon Jug: <input type="text" name="five">  <br><br>		
+		</form>
+ <input type="button" id="mainto3" value ="Main to 3 Gallon Jug" onclick="mainToThree()"/>
+  <input type="button" id="mainto5" value ="Main to 5 Gallon Jug" onclick="mainToFive()"/>
+   <input type="button" id="threeto5" value ="3 Gallon Jug to 5 Gallon Jug" onclick="threeToFive()"/>
+   <input type="button" id="threetomain" value ="3 Gallon Jug to Main Jug" onclick="threeToMain()"/>
+   <input type="button" id="Fiveto3" value ="5 Gallon Jug to 3 Gallon Jug" onclick="fiveToThree()"/>
+   <input type="button" id="Fivetomain" value ="5 Gallon Jug to Main Jug" onclick="fiveToMain()"/>
+</body>
+<script>
+var userForm = document.getElementById("userForm");
+document.getElementById("userForm").disabled = true;
+userForm[0].value = 100;
+
+</script>
+</html>
