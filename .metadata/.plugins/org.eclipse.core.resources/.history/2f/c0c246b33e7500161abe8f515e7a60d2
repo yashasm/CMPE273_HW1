@@ -28,15 +28,15 @@ public class Stacks {
 		graph.addEdges("package B", "package A");
 		graph.addEdges("package C", "package A");
 		
-		/*if(graph.search("package A", "package X")){
+		if(graph.search("package D", "package C")){
 			System.out.println("There is a link");
 		}
 		else{
 			System.out.println("No link");
-		}*/
-		System.out.println("Order of compilation :");
+		}
+		//System.out.println("Order of compilation :");
 		
-		graph.topologoical();
+		//graph.topologoical();
 		
 	}
 

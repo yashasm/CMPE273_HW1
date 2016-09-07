@@ -1,20 +1,9 @@
 
-import java.util.*;
+public class Queues {
 
-public class Stacks {	
-	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-	/*	A
-		/\
-	   B  C
-	  /\
-	 D  F
-	/
-	E*/
-				
-		Graph graph = new Graph(6);
+		UndirectedGraph graph = new UndirectedGraph(6);
 		graph.addVertices("package A",0);
 		graph.addVertices("package B",1);
 		graph.addVertices("package C",2);
@@ -28,16 +17,15 @@ public class Stacks {
 		graph.addEdges("package B", "package A");
 		graph.addEdges("package C", "package A");
 		
-		/*if(graph.search("package A", "package X")){
+		if(graph.search("package A", "package C")){
 			System.out.println("There is a link");
 		}
 		else{
 			System.out.println("No link");
-		}*/
-		System.out.println("Order of compilation :");
-		
-		graph.topologoical();
-		
+		}
+		//System.out.println("Order of compilation :");
+
+
 	}
 
 }

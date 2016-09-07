@@ -2,12 +2,12 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Stack;
 
-public class Graph{
+public class UndirectedGraph {
 	String names[];
 	ArrayList<LinkedList<String>> adj;
 	int V;
 	
-	Graph(int v){
+	UndirectedGraph(int v){
 		V = v;
 		names = new String[v];
 		adj = new ArrayList<LinkedList<String>>();
@@ -32,9 +32,9 @@ public class Graph{
 	
 	public void addEdges(String name1, String name2){
 		int index1 = getIndex(name1);
-		//int index2 = getIndex(name2);
+		int index2 = getIndex(name2);
 		adj.get(index1).add(name2);
-		//adj.get(index2).add(name1);
+		adj.get(index2).add(name1);
 	}
 	
 	public boolean search(String name1, String name2){

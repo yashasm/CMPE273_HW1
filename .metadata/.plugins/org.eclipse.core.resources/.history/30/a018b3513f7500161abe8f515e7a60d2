@@ -2,12 +2,12 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Stack;
 
-public class Graph{
+public class UndirectedGraph {
 	String names[];
 	ArrayList<LinkedList<String>> adj;
 	int V;
 	
-	Graph(int v){
+	UndirectedGraph(int v){
 		V = v;
 		names = new String[v];
 		adj = new ArrayList<LinkedList<String>>();
