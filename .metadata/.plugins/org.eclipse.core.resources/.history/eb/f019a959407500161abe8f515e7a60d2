@@ -37,6 +37,39 @@ public class Graph{
 		//adj.get(index2).add(name1);
 	}
 	
+	public boolean search(String name1, String name2){
+		if(name1.equals(name2)){
+			return true;
+		}
+		
+		LinkedList<String> queue = new LinkedList<String>();
+		boolean visited[] = new boolean[V];
+		
+		queue.add(name1);
+		int index = getIndex(name1);
+		visited[index] = true;
+		String test;
+		while(!queue.isEmpty()){
+			test = queue.removeFirst();
+			if(test != null){
+				int index1 = getIndex(test);
+				for(String v: adj.get(index1)){
+					int index2 = getIndex(v);
+					if(!visited[index2]){
+						if(v.equals(name2)){
+							return true;
+						}
+						else{
+							visited[index2] = true;
+							queue.add(v);
+						}
+					}
+				}
+			}
+		}
+		
+		return false;
+	}
 	
 	public void topologoical(){
 		Stack<String> stack = new Stack<String>();
