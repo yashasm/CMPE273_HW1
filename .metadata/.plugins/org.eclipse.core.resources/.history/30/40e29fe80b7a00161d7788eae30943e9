@@ -1,0 +1,46 @@
+
+public class Thread implements Runnable{
+	
+	private String threadName;
+	private int principle,rate,time;
+	
+	public Thread(String name, int p,int r,int t) {
+		// TODO Auto-generated constructor stub
+		this.threadName = name;
+		this.principle = p;
+		this.rate=r;
+		this.time=t;
+	}
+	
+	public void findInterest(int p,int r,int t){
+		
+		System.out.println("Thread - "+threadName+" calculating Simple Interest.");
+		System.out.println("Simple Interest = "+"$"+(p*r*t)/100);
+		System.out.println("Thread - "+threadName+" suspended.");
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println("Welcome to thread - "+threadName);
+		System.out.println("Loading.....");
+		try {
+			MultiThread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e);
+		}
+		findInterest(principle,rate,time);
+		
+	}
+
+	public static void main(String args[]){
+		
+		MultiThread t1 = new MultiThread(new MultiThread("Sandra", 80,10,2));
+		t1.start();
+		MultiThread t2 = new MultiThread(new MultiThread("Jose", 100,15,1));
+		t2.start();
+	}
+
+	
+}
