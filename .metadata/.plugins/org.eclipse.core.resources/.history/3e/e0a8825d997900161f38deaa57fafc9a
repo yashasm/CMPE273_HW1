@@ -1,0 +1,11 @@
+
+public abstract class Character {
+	WeaponSelected weapon;
+	
+	public void walk(){
+		System.out.println("Walking one step at a time");
+	};
+	
+	public abstract void run();
+
+}
