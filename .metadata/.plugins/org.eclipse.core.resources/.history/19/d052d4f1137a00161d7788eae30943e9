@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Simple shopping cart demo</title>
+</head>
+<body>
+<p>Chicken wings  <button onClick="addWings()" type="button">Add +1</button></p>
+<p>Pizza slice &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button onClick="addPizza()" type="button">Add +1</button></p>
+<p> Pepsi    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button onClick="addPepsi()" type="button">Add +1</button></p>
+<div id="wingsdiv"></div>
+<div id="pizzadiv"></div>
+<div id="pepsidiv"></div>
+</body>
+<script>
+//localStorage.pizza = "";
+//localStorage.pizzaCount = 0;
+//localStorage.wings = "";
+//localStorage.wingsCount = 0;
+//localStorage.pepsi = "";
+//localStorage.pepsiCount = 0;
+
+function addWings(){
+	
+	if(typeof(Storage)!= "undefined"){
+				
+		if(localStorage.wingsCount){
+			
+			localStorage.wingsCount = Number(localStorage.wingsCount) + 1;
+		}
+		else{
+			
+			localStorage.wingsCount = 1;
+		}
+		
+		document.getElementById("wingsdiv").innerHTML = "Chicken Wings --- count:"+localStorage.wingsCount;
+	}
+	else{
+		document.getElementById("wingsdiv").innerHTML = "Sorry, your browser does not support web storage...";
+	}
+}
+
+function addPepsi(){
+	
+	if(typeof(Storage)!= "undefined"){
+				
+		if(localStorage.pepsiCount){
+			
+			localStorage.pepsiCount = Number(localStorage.pepsiCount) + 1;
+		}
+		else{
+			
+			localStorage.wingspepsiCount = 1;
+		}
+		
+		document.getElementById("pepsidiv").innerHTML = "Pepsi --- count:"+localStorage.pepsiCount;
+	}
+	else{
+		document.getElementById("wingsdiv").innerHTML = "Sorry, your browser does not support web storage...";
+	}
+}
+function addPizza(){
+	
+	if(typeof(Storage)!= "undefined"){
+				
+		if(localStorage.wingsCount){
+			
+			localStorage.wingsCount = Number(localStorage.wingsCount) + 1;
+		}
+		else{
+			
+			localStorage.wingsCount = 1;
+		}
+		
+		document.getElementById("wingsdiv").innerHTML = "Chicken Wings --- count:"+localStorage.wingsCount;
+	}
+	else{
+		document.getElementById("wingsdiv").innerHTML = "Sorry, your browser does not support web storage...";
+	}
+}
+
+</script>
+</html>
