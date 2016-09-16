@@ -7,7 +7,12 @@ public class Array {
 	public static void arrange(ArrayList<Integer> arr, int pivot){
 		int lower =0;
 		int higher = arr.size();
-		int equal =0;		
+		int equal =0;
+		/*for(int i=0;i<higher;i++){
+			if(arr.get(i) < pivot){
+				Collections.swap(arr,lower,i);
+			}
+		}*/
 		while(equal < higher){
 			if(arr.get(equal) < pivot){
 				Collections.swap(arr, lower++, equal++);

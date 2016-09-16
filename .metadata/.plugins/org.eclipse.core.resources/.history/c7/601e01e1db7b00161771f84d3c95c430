@@ -23,24 +23,24 @@ public class Generics
 
     public static void main( String args[] )
     {
-      
+        // Create arrays of Integer, Double and Character
         Integer[] intArray = { 1, 2, 3, 4, 5 };
         Double[] doubleArray = { 1.1, 2.2, 3.3, 4.4 };
         String[] stringArray ={"yashas","emma","naruto","keerthi"};
 
         System.out.println( "Array integerArray contains:" );
-        printArray( intArray  ); 
+        printArray( intArray  ); // pass an Integer array
         System.out.println( "Array integerArray after reverse:" );
-        printReverse( intArray  ); 
+        printReverse( intArray  ); // pass an Integer array
 
         System.out.println( "\nArray doubleArray contains:" );
-        printArray( doubleArray ); 
+        printArray( doubleArray ); // pass a Double array
         System.out.println( "Array doubleArray after reverse:" );
-        printReverse( doubleArray  );
+        printReverse( doubleArray  ); // pass an Integer array
 
         System.out.println( "\nArray stringArray contains:" );
-        printArray( stringArray ); 
+        printArray( stringArray ); // pass a Character array
         System.out.println( "Array stringArray after reverse:" );
-        printReverse( stringArray  );
+        printReverse( stringArray  ); // pass an Integer array
     } 
 }

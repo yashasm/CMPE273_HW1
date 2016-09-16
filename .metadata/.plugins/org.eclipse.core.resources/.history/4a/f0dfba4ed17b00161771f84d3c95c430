@@ -17,7 +17,7 @@ public class Queues {
 		graph.addEdges("Yashas", "Emma");
 		graph.addEdges("Yashas", "Steve");
 		
-		if(graph.search("Tom", "John")){
+		if(graph.search("Tom", "Emma")){
 			System.out.println("Present in your friends list");
 		}
 		else{
