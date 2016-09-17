@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="ISO-8859-1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <style>
+        .back {
+            background-image: url("op.jpg");
+        }
+
+    </style>
+    <title>One Punch Man</title>
+</head>
+
+<body class="back">
+    <div class="container-fluid" style="background-image: url(" op.jpg ");">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h1 class="text-center" style="color:white;font-weight: bold;">One Punch Man</h1>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <video width="320" height="240" controls>
+                  <source src="trailer.mp4." type="video/mp4">
+                  <source src="trailer.ogg" type="video/ogg">
+                   Your browser does not support the video tag.
+                </video>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+
+                <h2 style="color:white;font-weight: bold;" class="text-center">Top tracks</h2>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <p style="color:white;font-weight: bold;"> Main theme song</p>
+                    <audio controls>
+                      <source src="main.ogg" type="audio/ogg">
+                      <source src="main.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <p style="color:white;font-weight: bold;"> End theme</p>
+                    <audio controls>
+                      <source src="track2.ogg" type="audio/ogg">
+                      <source src="track2.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
